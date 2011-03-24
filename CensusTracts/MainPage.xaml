@@ -167,18 +167,6 @@
                                         <Image Source="Images/i_overview.png" Stretch="Fill" />
 									</ToggleButton.Content>
 								</ToggleButton>
-
-								<Button x:Name="btnToggleMagnifyingGlass" Style="{StaticResource ToolbarButton}" 
-										ToolTipService.ToolTip="Toggle visibility of the magnifying glass">
-									<Button.Content>
-                                        <Image Source="Images/i_magnifyglass.png" Stretch="Fill" />
-                                    </Button.Content>
-                                    <i:Interaction.Triggers>
-                                        <i:EventTrigger EventName="Click">
-                                            <actions:ToggleVisibilityAction TargetName="MagnifyingGlass" />
-                                        </i:EventTrigger>
-                                    </i:Interaction.Triggers>
-                                </Button>
                             </StackPanel>
                         </Grid>
                 </userControls:CollapsiblePanel>
@@ -323,13 +311,6 @@
             </userControls:WindowPanel.ContentTitle>
         </userControls:WindowPanel>
 
-        <!-- Magnifying Glass -->
-		<esri:MagnifyingGlass x:Name="MagnifyingGlass" HorizontalAlignment="Left" VerticalAlignment="Top"
-        			Map="{Binding ElementName=Map}" Margin="50,150,0,0" Visibility="Collapsed">
-			<esri:MagnifyingGlass.Layer>
-				<esri:ArcGISTiledMapServiceLayer Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" />
-			</esri:MagnifyingGlass.Layer>
-		</esri:MagnifyingGlass>
 
 		<!-- Map Legend -->
 		<userControls:WindowPanel x:Name="MapLegendPanel"
